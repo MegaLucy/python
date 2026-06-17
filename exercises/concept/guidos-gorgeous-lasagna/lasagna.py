@@ -7,12 +7,18 @@ This is a module docstring, used to describe the functionality
 of a module and its functions and/or classes.
 """
 
+EXPECTED_BAKE_TIME=40
 
-#TODO (student): define your EXPECTED_BAKE_TIME (required) and PREPARATION_TIME (optional) constants below.
-
-
-#TODO (student): Remove 'pass' and complete the 'bake_time_remaining()' function below.
-def bake_time_remaining():
+def bake_time_remaining(EXPECTED_BAKE_TIME):
+    return EXPECTED_BAKE_TIME - elapsed_bake_time
+    
+def preparation_time_in_minutes(number_of_layers):
+    return number_of_layers * 2
+    
+def elapsed_time_in_minutes(number_of_layers, elapsed_bake_time):
+    return preparation_time_in_minutes(number_of_layers) + elapsed_bake_time
+    
+        
     """Calculate the bake time remaining.
 
     Parameters:
@@ -28,11 +34,6 @@ def bake_time_remaining():
 
     pass
 
-
-#TODO (student): Define the 'preparation_time_in_minutes()' function below.
-# To avoid the use of magic numbers (see: https://en.wikipedia.org/wiki/Magic_number_(programming)), you should define a PREPARATION_TIME constant.
-# You can do that on the line below the 'EXPECTED_BAKE_TIME' constant.
-# This will make it easier to do calculations, and make changes to your code.
 
 
 
